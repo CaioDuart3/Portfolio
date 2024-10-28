@@ -22,6 +22,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    overflow-y: auto;
     padding-top: calc(var(--paddingHeader) + 20px); /* Ajuste conforme a altura do header */
 }
 a{
@@ -411,3 +412,36 @@ footer{
 .sem-deploy:hover{
     cursor: pointer;
 }
+@media (max-width: 1090px) {
+    :root{
+        --paddingHeader: 16px 112px;
+        --paddingMain:  64px 112px;
+    }
+    #inicio {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap-reverse; /* Permite que os itens se movam para a linha seguinte */
+    }
+    #ferramentas div{
+        flex-wrap: wrap;
+    }
+    .navbar-items{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+@media(max-width: 760px){
+    :root{
+        --paddingHeader: 16px 56px;
+        --paddingMain:  64px 56px;
+    }
+    .container-header{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 360px){
+    :root{
+        --paddingHeader: 16px 32px;
+        --paddingMain:  64px 32px;
+    }
+} 
