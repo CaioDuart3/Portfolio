@@ -23,7 +23,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    padding-top: calc(var(--paddingHeader) + 20px); /* Ajuste conforme a altura do header */
+    padding-top: calc(var(--paddingHeader) + 20px); 
 }
 a{
     text-decoration: none;
@@ -51,7 +51,7 @@ button:hover{
     cursor: pointer;
 }
 .colorir-texto{
-    background: var(--Primary-Gradient, linear-gradient(114deg, #FF8660 38.79%, #9A33FF 91.52%));
+    background: var(--Primary-Gradient, linear-gradient(114deg, #00ff87 , #00b894 ));
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -160,12 +160,21 @@ align-self: stretch;
     line-height: normal;
     letter-spacing: 0.36px;
 }
+
+.formato-img-perfil {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;   
+    object-fit: cover;    
+    object-position: center; 
+}
+
 .elementos-inicio-contatos{
     display: flex;
 padding: 0px 16px;
 align-items: center;
 gap: 25px;
-border-left: 4px solid var(--Primary-Gradient, #FF8660);
+border-left: 4px solid var(--Primary-Gradient, #00ff87);
 }
 .elementos-inicio-contatos a{
     transition: transform 0.3s ease; /* Aplica uma transição suave */
