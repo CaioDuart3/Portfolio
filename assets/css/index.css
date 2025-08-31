@@ -1,456 +1,535 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 :root {
-    --corPrincipal: #080808;
-    --corSecundaria: #191919;
-    --corTerciaria: #2a2a2a;
-    --fontPrincipal: Poppins;
-    --corText: #ffffff;
-    --corTextSecundaria: #C5C5C5;
-    --corTextTerciaria: #8491A0;
-    --paddingHeader: 16px 224px;
-    --paddingMain:  64px 224px;
+  --main-gradient: linear-gradient(114deg, #00ff87, #00b894);
+  --corPrincipal: #080808;
+  --corSecundaria: #191919;
+  --corTerciaria: #2a2a2a;
+  --fontPrincipal: Poppins;
+  --corText: #ffffff;
+  --corTextSecundaria: #c5c5c5;
+  --corTextTerciaria: #8491a0;
+  --paddingHeader: 16px 224px;
+  --paddingMain: 64px 224px;
+}
+
+/* Reset básico para textos */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+blockquote,
+pre {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* Reset para links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset para listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset para imagens e vídeos */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset para box-sizing, muito usado hoje */
+* {
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: var(--corPrincipal);
-    color: var(--corText);
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding-top: calc(var(--paddingHeader) + 20px); 
+  background: var(--corPrincipal);
+  color: var(--corText);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: calc(var(--paddingHeader) + 20px);
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 header {
-    position: fixed; /* Torna o header fixo na parte superior */
-    top: 0;         /* Alinha o header ao topo da página */
-    left: 0;        /* Alinha o header à esquerda da página */
-    right: 0;       /* Alinha o header à direita da página */
-    padding: var(--paddingHeader);
-    background: var(--corSecundaria);
-    z-index: 1000;  /* Garante que o header fique acima de outros elementos */
+  position: fixed; /* Torna o header fixo na parte superior */
+  top: 0; /* Alinha o header ao topo da página */
+  left: 0; /* Alinha o header à esquerda da página */
+  right: 0; /* Alinha o header à direita da página */
+  padding: var(--paddingHeader);
+  background: var(--corSecundaria);
+  z-index: 1000; /* Garante que o header fique acima de outros elementos */
 }
-abbr{
-    transition: transform 0.3s ease; /* Transição suave */
+abbr {
+  transition: transform 0.3s ease; /* Transição suave */
 }
-abbr img{
-    height: 70px;
-    user-select: none;
+abbr img {
+  height: 70px;
+  user-select: none;
 }
-abbr:hover{
-    transform: scale(1.2);
+abbr:hover {
+  transform: scale(1.2);
 }
-button:hover{
-    cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
-.colorir-texto{
-    background: var(--Primary-Gradient, linear-gradient(114deg, #00ff87 , #00b894 ));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.colorir-texto {
+  background: var(--main-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .container-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btns-mode {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
 }
 
 .btns-mode img {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .navbar-items {
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    text-align: right;
-    gap: 72px;
-    flex: 1 0 0;
-    align-self: stretch;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  text-align: right;
+  gap: 72px;
+  flex: 1 0 0;
+  align-self: stretch;
 }
 
 .navbar-items a {
-    color: var(--corText);
-    text-align: center;
-    font-family: "Plus Jakarta Sans";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.3px;
-    position: relative; /* Necessário para o efeito do sublinhado */
+  color: var(--corText);
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  position: relative; /* Necessário para o efeito do sublinhado */
 }
 
 .navbar-items a::after {
-    content: ""; /* Cria um elemento após o link */
-    position: absolute; /* Posiciona o sublinhado em relação ao link */
-    left: 0;
-    bottom: -2px; /* Ajuste a posição do sublinhado */
-    width: 100%; /* O sublinhado terá a mesma largura que o texto */
-    height: 2px; /* Espessura do sublinhado */
-    background-color: var(--corText); /* Cor do sublinhado */
-    transform: scaleX(0); /* Inicialmente, o sublinhado está escondido */
-    transition: transform 0.3s ease; /* Transição suave */
+  content: ""; /* Cria um elemento após o link */
+  position: absolute; /* Posiciona o sublinhado em relação ao link */
+  left: 0;
+  bottom: -2px; /* Ajuste a posição do sublinhado */
+  width: 100%; /* O sublinhado terá a mesma largura que o texto */
+  height: 2px; /* Espessura do sublinhado */
+  background-color: var(--corText); /* Cor do sublinhado */
+  transform: scaleX(0); /* Inicialmente, o sublinhado está escondido */
+  transition: transform 0.3s ease; /* Transição suave */
 }
 
 .navbar-items a:hover::after {
-    transform: scaleX(1.1); /* Quando passar o mouse, o sublinhado aparece */
+  transform: scaleX(1.1); /* Quando passar o mouse, o sublinhado aparece */
 }
 
-#content{
-    display: flex;
-padding: var(--paddingMain);
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 32px;
-flex: 1 0 0;
-align-self: stretch;
+#content {
+  display: flex;
+  padding: var(--paddingMain);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex: 1 0 0;
+  align-self: stretch;
 }
-#inicio{
-    display: flex;
-align-items: center;
-gap: 32px;
-align-self: stretch;
+#inicio {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
 }
-.elementos-inicio{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 24px;
+.elementos-inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
 }
-.elementos-inicio-texto{
-    display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-align-self: stretch;
+.elementos-inicio-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
 }
-.elementos-inicio-texto h1{
-    color: var(--corText);
-    font-family: Poppins;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 800;
+.elementos-inicio-texto h1 {
+  color: var(--corText);
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
 }
-.elementos-inicio-texto p{
-    color:var(--corTextSecundaria) ;
-    text-align: justify;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    letter-spacing: 0.36px;
+.elementos-inicio-texto p {
+  color: var(--corTextSecundaria);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.36px;
 }
 
 .formato-img-perfil {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;   
-    object-fit: cover;    
-    object-position: center; 
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.elementos-inicio-contatos{
-    display: flex;
-padding: 0px 16px;
-align-items: center;
-gap: 25px;
-border-left: 4px solid var(--Primary-Gradient, #00ff87);
+.elementos-inicio-contatos {
+  display: flex;
+  padding: 0px 16px;
+  align-items: center;
+  gap: 25px;
+  border-left: 4px solid var(--main-gradient);
 }
-.elementos-inicio-contatos a{
-    transition: transform 0.3s ease; /* Aplica uma transição suave */
+.elementos-inicio-contatos a {
+  transition: transform 0.3s ease; /* Aplica uma transição suave */
 }
-.elementos-inicio-contatos a:hover{
-    transform: scale(1.2);
-}
-
-.elementos-inicio-btn{
-    display: flex;
-align-items: center;
-gap: 16px;
+.elementos-inicio-contatos a:hover {
+  transform: scale(1.2);
 }
 
-.elementos-inicio-btn button{
-    display: flex;
-padding: 16px 32px;
-justify-content: center;
-align-items: center;
-
-font-family: Poppins;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+.elementos-inicio-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.btn-entrar-contato{
-    border: none;
-    border-radius: 64px;
-background: var(--corText);
-border: 2px solid var(--corText);
-color: var(--corPrincipal);
-}
-.btn-entrar-contato:hover{
-    border-radius: 64px;
-    background: none;
-    color: var(--corText);
-}
-.btn-baixar-cv{
-    border-radius: 64px;
-    background: none;
-    color: var(--corText);
-border: 2px solid var(--corText);
-}
-.btn-baixar-cv:hover{
-    background: var(--corText);
-    color: var(--corPrincipal);
-}
-#ferramentas{
-    display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 27px;
-align-self: stretch;
-}
-#ferramentas h1{
-text-align: center;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-letter-spacing: 2.4px;
-}
-#ferramentas div{
-    display: flex;
-padding: 10px;
-justify-content: space-between;
-align-items: center;
-align-self: stretch;
+.elementos-inicio-btn button {
+  display: flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
-#projetos{
-    display: flex;
-flex-direction: column;
-align-items: center;
-gap: 27px;
-align-self: stretch;
+.btn-entrar-contato {
+  border: none;
+  border-radius: 64px;
+  background: var(--corText);
+  border: 2px solid var(--corText);
+  color: var(--corPrincipal);
 }
-#projetos h1{
-    font-family: Poppins;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 800;
-    text-transform: uppercase;
-    background: var(--Orange-Gradient, linear-gradient(180deg, #FF8660 0%, #D5491D 100%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.btn-entrar-contato:hover {
+  border-radius: 64px;
+  background: none;
+  color: var(--corText);
 }
-.container-projetos{
-    display: flex;
-justify-content: center;
-align-items: center;
-align-content: center;
-gap: 16px;
-align-self: stretch;
-flex-wrap: wrap;
+.btn-baixar-cv {
+  border-radius: 64px;
+  background: none;
+  color: var(--corText);
+  border: 2px solid var(--corText);
 }
-.projeto-item{
-    user-select: none;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-align-items: center;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.516); /* Adiciona sombra ao elemento */
-transition: transform 0.3s ease; /* Aplica uma transição suave */
-border-radius: 8px;
+.btn-baixar-cv:hover {
+  background: var(--corText);
+  color: var(--corPrincipal);
 }
-.projeto-item:hover{
-    transform: scale(1.1);
+#ferramentas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 27px;
+  align-self: stretch;
 }
-.projeto-item img{
-    width: 350px;
-height: 170px;
-border-radius: 8px 8px 0px 0px;;
-object-fit: cover;
+#ferramentas h1 {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.4px;
 }
-.projeto-item-inferior{
-    display: flex;
-padding: 16px 32px;
-justify-content: space-between;
-align-items: center;
-align-self: stretch;
-border-radius: 0px 0px 8px 8px;;
-background: var(--corTerciaria);
-}
-.projeto-item-inferior-texto{
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-}
-.projeto-item-inferior-icons{
-    display: flex;
-    gap: 32px;
-}
-.projeto-item-inferior p{
-    color: var(--corTextSecundaria);
-font-family: Poppins;
-font-size: 10px;
-font-style: normal;
-font-weight: 800;
-text-transform: uppercase;
-}
-.projeto-item-inferior h2{
-    color: var(--corText);
-font-family: Poppins;
-font-size: 19px;
-font-style: normal;
-font-weight: 800;
-text-transform: uppercase;
+#ferramentas div {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
 }
 
-#experiencias{
-    display: flex;
-flex-direction: column;
-align-items: center;
-gap: 27px;
-align-self: stretch;
+#projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+  align-self: stretch;
 }
-#experiencias h1{
-    font-family: Poppins;
-font-size: 35px;
-font-style: normal;
-font-weight: 800;
-text-transform: uppercase;
-background: var(--Blue-Gradient, linear-gradient(180deg, #5BADFF 0%, #1373D1 100%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+#projetos h1 {
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: var(
+    --Orange-Gradient,
+    linear-gradient(180deg, #ff8660 0%, #d5491d 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.container-experiencias{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-gap: 50px;
-align-self: stretch;
+.container-projetos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
+  align-self: stretch;
+  flex-wrap: wrap;
 }
-.exp-item{
-    display: flex;
-flex-direction: column;
-align-items: center;
-align-self: stretch
+.projeto-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.516); /* Adiciona sombra ao elemento */
+  transition: transform 0.3s ease; /* Aplica uma transição suave */
+  border-radius: 8px;
+  background: var(--corTerciaria);
 }
-.exp-item-info{
-    display: flex;
-justify-content: space-between;
-align-items: center;
-align-self: stretch;
+.projeto-item:hover {
+  transform: translateY(-10px); /* Move o elemento 10px para cima */
 }
-.exp-item-info-name-icon{
-    display: flex;
-align-items: flex-start;
-gap: 12px;
-align-items: center;
-justify-content: center;
+
+.projeto-item img {
+  width: 350px;
+  height: 170px;
+  border-radius: 8px 8px 0px 0px;
+  object-fit: cover;
 }
-.exp-item-info-name-icon h2{
-    color: var(--corText);
-text-align: center;
-font-family: Poppins;
-font-size: 22px;
-font-style: normal;
-font-weight: 700;
+.projeto-item-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 0px 0px 8px 8px;
+  padding: 16px 16px 8px 16px;
 }
-.exp-item-info-name-icon img{
-    width: 42px;
-height: 42px;
-object-fit: contain;
+.projeto-item-inferior-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.exp-item{
-    color: var(--corTextTerciaria);
-text-align: center;
-font-family: Poppins;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
+.projeto-item-inferior-icons {
+  display: flex;
+  gap: 16px;
 }
-.exp-info-text{
-    display: flex;
-flex-direction: column;
-justify-content: center;
-align-self: stretch;
-text-align: justify;
+.projeto-item-inferior p {
+  color: var(--corTextSecundaria);
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
 }
-footer{
-    background-color:var(--corSecundaria) ;
-    padding: var(--paddingHeader);
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    justify-content: center;
-    align-items: center;
+.projeto-item-inferior h2 {
+  color: var(--corText);
+  font-family: Poppins;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
 }
-.footer-icons{ /* manter para caso eu queira inserir textos */
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    font-family: Poppins;
+
+.container-badge {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px 0px 0px 0px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
-.sem-deploy:hover{
-    cursor: pointer;
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 9999px; /* completamente arredondado */
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+  color: var(--corText);
+  border-color: var(--corText);
+  background-color: transparent;
+  font-family: Poppins;
+}
+.badge:hover {
+  background-color: var(--corText);
+  color: var(--corPrincipal);
+}
+
+#experiencias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+  align-self: stretch;
+}
+#experiencias h1 {
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: var(
+    --Blue-Gradient,
+    linear-gradient(180deg, #5badff 0%, #1373d1 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container-experiencias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+  align-self: stretch;
+}
+.exp-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+.exp-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.exp-item-info-name-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.exp-item-info-name-icon h2 {
+  color: var(--corText);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+}
+.exp-item-info-name-icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+.exp-item {
+  color: var(--corTextTerciaria);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.exp-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  text-align: justify;
+}
+footer {
+  background-color: var(--corSecundaria);
+  padding: var(--paddingHeader);
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icons {
+  /* manter para caso eu queira inserir textos */
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  font-family: Poppins;
+}
+.sem-deploy:hover {
+  cursor: pointer;
 }
 @media (max-width: 1090px) {
-    :root{
-        --paddingHeader: 16px 112px;
-        --paddingMain:  64px 112px;
-    }
-    #inicio {
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap-reverse; /* Permite que os itens se movam para a linha seguinte */
-    }
-    #ferramentas div{
-        flex-wrap: wrap;
-    }
-    .navbar-items{
-        flex-wrap: wrap;
-        gap: 30px;
-    }
+  :root {
+    --paddingHeader: 16px 112px;
+    --paddingMain: 64px 112px;
+  }
+  #inicio {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse; /* Permite que os itens se movam para a linha seguinte */
+  }
+  #ferramentas div {
+    flex-wrap: wrap;
+  }
+  .navbar-items {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
-@media(max-width: 760px){
-    :root{
-        --paddingHeader: 16px 56px;
-        --paddingMain:  64px 56px;
-    }
-    .container-header{
-        flex-wrap: wrap;
-    }
+@media (max-width: 760px) {
+  :root {
+    --paddingHeader: 16px 56px;
+    --paddingMain: 64px 56px;
+  }
+  .container-header {
+    flex-wrap: wrap;
+  }
 }
-@media(max-width: 360px){
-    :root{
-        --paddingHeader: 16px 32px;
-        --paddingMain:  64px 32px;
-    }
-} 
+@media (max-width: 360px) {
+  :root {
+    --paddingHeader: 16px 32px;
+    --paddingMain: 64px 32px;
+  }
+}

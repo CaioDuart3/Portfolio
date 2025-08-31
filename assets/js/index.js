@@ -1,4 +1,4 @@
-(function main(){
+(function swapMode(){
     let isDarkMode = true;
 
     function setDarkMode() {
@@ -53,3 +53,36 @@
         }
     });
 })()
+
+(function showProjects() {
+    const projetos = [
+        // seus projetos aqui
+    ];
+
+    const containerProjetos = document.querySelector(".container-projetos");
+    containerProjetos.innerHTML = "";
+
+    projetos.forEach(projeto => {
+        const projetoItem = document.createElement("div");
+        projetoItem.classList.add("projeto-item");
+
+        projetoItem.innerHTML = `
+            <img src="${projeto.imagem}" alt="${projeto.name}" />
+            <div class="projeto-item-inferior">
+                <div class="projeto-item-inferior-texto">
+                    <p>${projeto.descricao}</p>
+                    <h2>${projeto.name}</h2>
+                    <div class="container-badge">
+                        ${projeto.stack.map(tech => `<span class="badge">${tech}</span>`).join('')}
+                    </div>
+                </div>
+                <div class="projeto-item-inferior-icons">
+                    <a href="${projeto.github}" target="_blank">GitHub</a>
+                    <a href="${projeto.live}" target="_blank">Live</a>
+                </div>
+            </div>
+        `;
+
+        containerProjetos.appendChild(projetoItem);
+    });
+})();
