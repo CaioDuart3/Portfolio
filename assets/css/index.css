@@ -482,6 +482,31 @@ button:hover {
   align-self: stretch;
   text-align: justify;
 }
+
+#voluntariado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+  align-self: stretch;
+}
+#voluntariado h1 {
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: var(
+    --Blue-Gradient,
+    linear-gradient(180deg, #ffe45b 0%, #ffac1c 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
 footer {
   background-color: var(--corSecundaria);
   padding: var(--paddingHeader);
