@@ -111,6 +111,7 @@ button:hover {
   align-items: center;
   gap: 32px;
   align-self: stretch;
+  cursor: pointer;
 }
 
 .btns-mode img {

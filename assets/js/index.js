@@ -9,17 +9,18 @@
         document.documentElement.style.setProperty('--corTextSecundaria', '#C5C5C5');
         document.documentElement.style.setProperty('--corTextTerciaria', '#8491A0');
         changeSvgFill('white'); 
+        isDarkMode = true;
     }
 
     function setLightMode() {
         document.documentElement.style.setProperty('--corPrincipal', '#f5f5f5');
         document.documentElement.style.setProperty('--corSecundaria', 'linear-gradient(to bottom, #eaeaea, transparent)');
-
         document.documentElement.style.setProperty('--corTerciaria', '#dcdcdc');
         document.documentElement.style.setProperty('--corText', '#080808');
         document.documentElement.style.setProperty('--corTextSecundaria', '#333333');
         document.documentElement.style.setProperty('--corTextTerciaria', '#555555');
         changeSvgFill('black'); 
+        isDarkMode = false;
     }
 
     function toggleMode() {
@@ -28,18 +29,30 @@
         } else {
             setDarkMode();
         }
-        isDarkMode = !isDarkMode; 
     }
 
     function changeSvgFill(color) {
         const elements = document.querySelectorAll('svg [fill]');
         elements.forEach(element => {
             const currentFill = element.getAttribute('fill');
-            if (currentFill === 'white' || currentFill === 'black') { // Verifica se é uma cor que queremos alterar
-                element.setAttribute('fill', color); // Altera o fill
+            if (currentFill === 'white' || currentFill === 'black') {
+                element.setAttribute('fill', color);
             }
         });
     }
+
+    // Detecta hora atual para definir o tema inicial
+    function setModeByTime() {
+        const hour = new Date().getHours();
+        if (hour >= 6 && hour < 18) {
+            setLightMode(); // Dia → Light
+        } else {
+            setDarkMode();  // Noite → Dark
+        }
+    }
+
+    // Inicializa com base na hora
+    setModeByTime();
 
     const toggleButton = document.getElementById('toggle-mode');
     if (toggleButton) {
@@ -51,38 +64,5 @@
         if (element.classList.contains('sem-deploy')) {
             alert('O deploy deste site ainda não foi realizado, mas sinta-se à vontade para olhar o repositório.');
         }
-    });
-})()
-
-(function showProjects() {
-    const projetos = [
-        // seus projetos aqui
-    ];
-
-    const containerProjetos = document.querySelector(".container-projetos");
-    containerProjetos.innerHTML = "";
-
-    projetos.forEach(projeto => {
-        const projetoItem = document.createElement("div");
-        projetoItem.classList.add("projeto-item");
-
-        projetoItem.innerHTML = `
-            <img src="${projeto.imagem}" alt="${projeto.name}" />
-            <div class="projeto-item-inferior">
-                <div class="projeto-item-inferior-texto">
-                    <p>${projeto.descricao}</p>
-                    <h2>${projeto.name}</h2>
-                    <div class="container-badge">
-                        ${projeto.stack.map(tech => `<span class="badge">${tech}</span>`).join('')}
-                    </div>
-                </div>
-                <div class="projeto-item-inferior-icons">
-                    <a href="${projeto.github}" target="_blank">GitHub</a>
-                    <a href="${projeto.live}" target="_blank">Live</a>
-                </div>
-            </div>
-        `;
-
-        containerProjetos.appendChild(projetoItem);
     });
 })();
