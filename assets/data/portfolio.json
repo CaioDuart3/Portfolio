@@ -2,10 +2,10 @@
   "personalInfo": {
     "name": "Caio Ferreira Duarte",
     "title": "Engenheiro de Software em Formação",
-    "description": "Graduando em Engenharia de Software pela Universidade de Brasília (UnB), com experiência em desenvolvimento Full-Stack, Engenharia de Dados e participação em projetos acadêmicos e de pesquisa.",
+    "description": "Graduando em Engenharia de Software pela Universidade de Brasília (UnB), com experiência em desenvolvimento Full-Stack, Engenharia de Dados e participação em projetos acadêmicos, pesquisa e em Empresa jínior. Busco oportunidade na área de desenvolvimento ou de dados",
     "phone": "+5561996901265",
     "email": "caioduarte330@gmail.com",
-    "profileImage": "https://media.licdn.com/dms/image/v2/D4D03AQEc8Vebgg9EGg/profile-displayphoto-shrink_400_400/B4DZUPNz7lHwAg-/0/1739717034755?e=1772064000&v=beta&t=l4T1_2Z1PqXQF07u3SV_p-i7sDchZWOPxRUuO38_1QM",
+    "profileImage": "./assets/img/eu.jpeg",
     "cvFile": "./assets/files/curriculo.pdf"
   },
   "social": {
@@ -89,6 +89,64 @@
       "titulo": "Iniciação Científica Voluntária - Bem-te-vi",
       "periodo": "08/2025 - Presente",
       "descricao": "Desenvolvimento de API inteligente para processamento de prontuários médicos utilizando OpenCV, CRAFT e TrOCR para reconhecimento de manuscritos."
+    }
+  ],
+  "stack": [
+    {
+      "name": "JavaScript",
+      "icon": "https://img.icons8.com/?size=100&id=108784&format=png&color=000000"
+    },
+    {
+      "name": "NestJS",
+      "icon": "https://www.svgrepo.com/show/373872/nestjs.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "https://www.svgrepo.com/show/354200/postgresql.svg"
+    },
+    {
+      "name": "Supabase",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/supabase.webp"
+    },
+    {
+      "name": "Docker",
+      "icon": "https://www.svgrepo.com/show/349342/docker.svg"
+    },
+    {
+      "name": "Playwright",
+      "icon": "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/playwright-y50bnthygb3rvsppvkm9e.png/playwright-q55xzpenhgjsodksybst.png"
+    },
+    {
+      "name": "Power BI",
+      "icon": "https://powerverseapps.com/wp-content/uploads/2024/04/power-bi-icon.png"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "https://www.svgrepo.com/show/374118/tailwind.svg"
+    },
+    {
+      "name": "Python",
+      "icon": "https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000"
+    },
+    {
+      "name": "Django",
+      "icon": "https://1000logos.net/wp-content/uploads/2020/08/Django-Logo.png"
+    },
+    {
+      "name": "Jupyter",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1280px-Jupyter_logo.svg.png"
+    },
+    {
+      "name": "Expo",
+      "icon": "https://www.svgrepo.com/show/373591/expo.svg"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "https://img.icons8.com/?size=100&id=g9mmSxx3SwAI&format=png&color=000000"
+    },
+    {
+      "name": "Figma",
+      "icon": "https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000"
     }
   ],
   "skills": [
