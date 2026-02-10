@@ -1,0 +1,146 @@
+{
+  "personalInfo": {
+    "name": "Caio Ferreira Duarte",
+    "title": "Engenheiro de Software em Formação",
+    "description": "Graduando em Engenharia de Software pela Universidade de Brasília (UnB), com experiência em desenvolvimento Full-Stack, Engenharia de Dados e participação em projetos acadêmicos e de pesquisa.",
+    "phone": "+5561996901265",
+    "email": "caioduarte330@gmail.com",
+    "profileImage": "https://media.licdn.com/dms/image/v2/D4D03AQEc8Vebgg9EGg/profile-displayphoto-shrink_400_400/B4DZUPNz7lHwAg-/0/1739717034755?e=1772064000&v=beta&t=l4T1_2Z1PqXQF07u3SV_p-i7sDchZWOPxRUuO38_1QM",
+    "cvFile": "./assets/files/curriculo.pdf"
+  },
+  "social": {
+    "github": "https://github.com/CaioDuart3",
+    "linkedin": "https://www.linkedin.com/in/caio-duarte-919481297/",
+    "whatsapp": "https://wa.me/5561996901265"
+  },
+  "projects": [
+    {
+      "img": "./assets/img/BI_Aircraft_Accidents.png",
+      "descricao": "Pipeline ETL para análise de acidentes aéreos com modelagem dimensional e Data Warehouse.",
+      "titulo": "Pipeline de Acidentes Aéreos",
+      "tecnologias": ["Python","SQL", "PostgreSQL", "Power BI", "Docker", "Jupyter"],
+      "github": "https://github.com/CaioDuart3/Aircraft_Accidents",
+      "deploy": "https://app.powerbi.com/view?r=eyJrIjoiNDUyY2Q1YmItZWUxYi00MTlmLTk3NTYtYWVkZmUwNmYwNzllIiwidCI6ImVjMzU5YmExLTYzMGItNGQyYi1iODMzLWM4ZTZkNDhmODA1OSJ9"
+    },
+    {
+        "img": "./assets/img/Python_to_C.png",
+        "descricao": "Projeto acadêmico de compiladores envolvendo tradução de código.",
+        "titulo": "Compilador Python para C",
+        "tecnologias": ["Python", "C", "Parser", "Análise Léxica", "Análise Sintática", "Geração de Código", "Bison", "Flex"],
+        "github": "https://github.com/CaioDuart3/python_to_C",
+        "deploy": "https://caioduart3.github.io/python_to_C/"
+    },
+    {
+      "img": "./assets/img/IBGE.png",
+      "descricao": "Aplicação prática de engenharia de requisitos sobre o aplicativo do IBGE.",
+      "titulo": "Engenharia de Requisitos sobre o IBGE",
+      "tecnologias": ["Elicitação de Requisitos", "Análise de Requisitos", "Rastreabilidade", "Verificação e Validação", "Prototipagem"],
+      "github": "https://github.com/CaioDuart3/2025.1-IBGE",
+      "deploy": "https://caioduart3.github.io/2025.1-IBGE/"
+    },
+    {
+      "img": "./assets/img/mmts.png",
+      "descricao": "Sistema de gestão para equipe de competição Mamutes do Cerrado.",
+      "titulo": "Mamutes do Cerrado",
+      "tecnologias": ["Django", "HTML", "CSS", "JavaScript", "SQLite", "Supabase"],
+      "github": "",
+      "deploy": ""
+    },
+    {
+      "img": "./assets/img/Medconnect.png",
+      "descricao": "Site de avaliação de hospitais com exibição de tempo médio de atendimento.",
+      "titulo": "MedConnect",
+      "tecnologias": ["Django", "HTML", "CSS", "Figma"],
+      "github": "https://github.com/CaioDuart3/medconnect-verde-pantano",
+      "deploy": "https://medconnect-verde-pantano.vercel.app/"
+    },
+    {
+      "img": "./assets/img/lp_Outcom.png",
+      "descricao": "Landing page institucional para a Outcom.",
+      "titulo": "Landing page",
+      "tecnologias": ["HTML", "CSS", "JavaScript"],
+      "github": "https://github.com/CaioDuart3/lp_Outcom",
+      "deploy": "https://outcom.netlify.app/"
+    }
+  ],
+  "experiences": [
+    {
+      "img": "https://brasil.campus-party.org/wp-content/uploads/2024/02/Orcestra-Gamificacao.png",
+      "titulo": "Engenheiro de Software - Orc’estra Gamificação",
+      "periodo": "09/2024 - 09/2025",
+      "descricao": "Atuação na elicitação e análise de requisitos, planejamento de projetos e desenvolvimento de aplicativo mobile gamificado utilizando Expo (React Native), NestJS, arquitetura REST e Supabase."
+    },
+    {
+      "img": "data:image/png;base64,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",
+      "titulo": "Tutor de Estruturas de Dados I - UnB",
+      "periodo": "08/2025 - 12/2025",
+      "descricao": "Suporte acadêmico aos alunos com listas de exercícios, aulas extras e atendimento individualizado."
+    }
+  ],
+  "volunteer": [
+    {
+      "img": "./assets/img/cedis.jpg",
+      "titulo": "Pesquisador Voluntário - CEDIS",
+      "periodo": "10/2025 - Presente",
+      "descricao": "Atuação no design de gamificação e desenvolvimento de jogo de Realidade Virtual para pacientes com lesão medular."
+    },
+    {
+      "img": "./assets/img/btv.png",
+      "titulo": "Iniciação Científica Voluntária - Bem-te-vi",
+      "periodo": "08/2025 - Presente",
+      "descricao": "Desenvolvimento de API inteligente para processamento de prontuários médicos utilizando OpenCV, CRAFT e TrOCR para reconhecimento de manuscritos."
+    }
+  ],
+  "skills": [
+    {
+      "category": "Backend",
+      "items": ["Python", "Django", "NestJS", "APIs REST"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["HTML", "CSS", "JavaScript", "Expo (React Native)", "Figma"]
+    },
+    {
+      "category": "Bancos de Dados",
+      "items": ["SQLite", "SQL", "PostgreSQL"]
+    },
+    {
+      "category": "Soft Skills",
+      "items": ["Comunicação", "Trabalho em Equipe", "Organização", "Resolução de Problemas"]
+    }
+  ],
+  "statistics": [
+    {
+      "number": "5+",
+      "label": "Projetos Desenvolvidos"
+    },
+    {
+      "number": "2+",
+      "label": "Anos de Experiência Acadêmica"
+    },
+    {
+      "number": "10+",
+      "label": "Tecnologias Utilizadas"
+    },
+    {
+      "number": "100%",
+      "label": "Dedicação"
+    }
+  ],
+  "cta": {
+    "title": "Pronto para colaborar?",
+    "description": "Estou aberto a novos projetos, desafios e oportunidades de aprendizado.",
+    "buttons": [
+      {
+        "text": "Entre em Contato via WhatsApp",
+        "url": "https://wa.me/5561996901265",
+        "class": "cta-btn-primary"
+      },
+      {
+        "text": "Enviar Email",
+        "url": "mailto:caioduarte330@gmail.com",
+        "class": "cta-btn-secondary"
+      }
+    ]
+  }
+}
