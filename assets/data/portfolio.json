@@ -16,7 +16,7 @@
   "projects": [
     {
       "img": "./assets/img/BI_Aircraft_Accidents.png",
-      "descricao": "Pipeline ETL para análise de acidentes aéreos com modelagem dimensional e Data Warehouse.",
+      "descricao": "Pipeline ETL para análise de acidentes aéreos com modelagem dimensional (Star Schema) e Data Warehouse utilizando a Arquitetura Medalhão.",
       "titulo": "Pipeline de Acidentes Aéreos",
       "tecnologias": ["Python","SQL", "PostgreSQL", "Power BI", "Docker", "Jupyter"],
       "github": "https://github.com/CaioDuart3/Aircraft_Accidents",
@@ -110,7 +110,7 @@
     },
     {
       "name": "Docker",
-      "icon": "https://www.svgrepo.com/show/349342/docker.svg"
+      "icon": "https://brandlogos.net/wp-content/uploads/2025/10/docker_mark-logo_brandlogos.net_yetav.png"
     },
     {
       "name": "Playwright",
